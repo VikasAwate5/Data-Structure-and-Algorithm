@@ -1,3 +1,5 @@
+package src.array;
+
 class RemoveEvenInteger {
 
     public static void printArray(int[] arr) {
