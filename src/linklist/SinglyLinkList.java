@@ -34,6 +34,24 @@ public class SinglyLinkList {
         System.out.println("length of link list : " + count);
     }
 
+    private void insertAtStart(ListNode newNode) {
+        newNode.next = head;
+        head = newNode;
+    }
+
+    private void insertAtLast(ListNode newNode) {
+        ListNode current = head;
+        if (current == null) {
+            head = newNode;
+            return;
+        }
+
+        while (current.next != null) {
+            current = current.next;
+        }
+        current.next = newNode;
+    }
+
     public static void main(String[] args) {
         SinglyLinkList sl = new SinglyLinkList();
 
@@ -48,8 +66,24 @@ public class SinglyLinkList {
         ListNode third = new ListNode(40);
         second.next = third;
 
+        //Printing linkList
         sl.printLinkList(sl.head);
+
+        //calculating linkList length
         sl.lengthOfLinkList(sl.head);
+
+        //add node at begining
+        sl.insertAtStart(new ListNode(50));
+
+        //printing linkList
+        sl.printLinkList(sl.head);
+
+        //add node at last
+        sl.insertAtLast(new ListNode(60));
+
+        //printing linkList
+        sl.printLinkList(sl.head);
+
     }
 
 }
