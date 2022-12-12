@@ -21,7 +21,17 @@ public class SinglyLinkList {
             System.out.print(current.data + " --> ");
             current = current.next;
         }
-        System.out.print("null");
+        System.out.println("null");
+    }
+
+    private void lengthOfLinkList(ListNode current) {
+        int count = 0;
+        while (current != null) {
+            count++;
+            current = current.next;
+        }
+
+        System.out.println("length of link list : " + count);
     }
 
     public static void main(String[] args) {
@@ -39,6 +49,7 @@ public class SinglyLinkList {
         second.next = third;
 
         sl.printLinkList(sl.head);
+        sl.lengthOfLinkList(sl.head);
     }
 
 }
