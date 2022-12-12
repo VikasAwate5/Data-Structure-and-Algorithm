@@ -1,5 +1,7 @@
 package src.array;
 
+//Remove even number from an array.
+
 class RemoveEvenInteger {
 
     public static void printArray(int[] arr) {
